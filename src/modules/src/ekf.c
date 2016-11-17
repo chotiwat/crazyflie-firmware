@@ -25,8 +25,8 @@ void initUsecTimer() {}
 #endif
 
 // measured constants
-#define VICON_VAR_XY 1.5e-5
-#define VICON_VAR_VEL 2e-4
+#define VICON_VAR_XY 1.5e-4 // 1.5e-5
+#define VICON_VAR_VEL 1 //2e-4
 // #define VICON_VAR_Z  1.0e-8
 #define VICON_VAR_Q  4.5e-1
 #define GYRO_VAR_XYZ 0.2e-4
