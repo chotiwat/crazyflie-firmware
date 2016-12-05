@@ -81,7 +81,7 @@ typedef void (*Ledring12Effect)(uint8_t buffer[][3], bool reset);
 #define LINSCALE(domain_low, domain_high, codomain_low, codomain_high, value) ((codomain_high - codomain_low) / (domain_high - domain_low)) * (value - domain_low) + codomain_low
 #define SET_WHITE(dest, intensity) dest[0] = intensity; dest[1] = intensity; dest[2] = intensity;
 
-static uint32_t effect = 6;
+static uint32_t effect = 7;
 static uint32_t neffect;
 static uint8_t headlightEnable = 0;
 static uint8_t black[][3] = {BLACK, BLACK, BLACK,
@@ -172,9 +172,9 @@ static void solidColorEffect(uint8_t buffer[][3], bool reset)
 
   for (i=0; i<NBR_LEDS; i++)
   {
-    buffer[i][0] = solidRed*brightness;
-    buffer[i][1] = solidGreen*brightness;
-    buffer[i][2] = solidBlue*brightness;
+    buffer[i][0] = 255;//solidRed*brightness;
+    buffer[i][1] = 255;//solidGreen*brightness;
+    buffer[i][2] = 255;//solidBlue*brightness;
   }
 }
 
